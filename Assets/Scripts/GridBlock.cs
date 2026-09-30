@@ -108,12 +108,12 @@ public class GridBlock : MonoBehaviour
 
                 if (seekPath != null)
                 {
-                    if (seekPath.Contains(n)) Gizmos.color = Color.lightYellow;
+                    if (seekPath.Contains(n)) Gizmos.color = Color.yellowGreen;
                 }
 
                 if (fleePath != null)
                 {
-                    if (fleePath.Contains(n)) Gizmos.color = Color.lightGreen;
+                    if (fleePath.Contains(n)) Gizmos.color = Color.darkGreen;
                 }
 
                 if (playerNode == n) Gizmos.color = Color.red;
