@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60489470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 101503739}
   - component: {fileID: 101503738}
   - component: {fileID: 101503737}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,6 +284,151 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101503735}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &142736272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142736277}
+  - component: {fileID: 142736276}
+  - component: {fileID: 142736275}
+  - component: {fileID: 142736274}
+  - component: {fileID: 142736273}
+  m_Layer: 0
+  m_Name: Mama Duck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &142736273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!136 &142736274
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &142736275
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b7351616b644aff4da032f03e89d0c64, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &142736276
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &142736277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4, y: 1, z: 11.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &317145953
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +443,7 @@ GameObject:
   - component: {fileID: 317145955}
   - component: {fileID: 317145954}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eee55ee13f73ead4b935e75232f41832, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -441,7 +586,7 @@ GameObject:
   - component: {fileID: 380391968}
   - component: {fileID: 380391967}
   - component: {fileID: 380391966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +698,7 @@ GameObject:
   - component: {fileID: 433098021}
   - component: {fileID: 433098020}
   - component: {fileID: 433098019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +810,7 @@ GameObject:
   - component: {fileID: 440379748}
   - component: {fileID: 440379747}
   - component: {fileID: 440379746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,6 +910,151 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440379744}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &470519503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470519508}
+  - component: {fileID: 470519507}
+  - component: {fileID: 470519506}
+  - component: {fileID: 470519505}
+  - component: {fileID: 470519504}
+  m_Layer: 0
+  m_Name: Duckling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &470519504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!136 &470519505
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &470519506
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 46bb95a860aba104f884913be22fd2df, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &470519507
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &470519508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.6, y: 1, z: -12.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547719004
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +1067,7 @@ GameObject:
   - component: {fileID: 547719008}
   - component: {fileID: 547719007}
   - component: {fileID: 547719006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +1179,7 @@ GameObject:
   - component: {fileID: 547914485}
   - component: {fileID: 547914484}
   - component: {fileID: 547914483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1291,7 @@ GameObject:
   - component: {fileID: 553527629}
   - component: {fileID: 553527628}
   - component: {fileID: 553527627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1101,6 +1391,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553527625}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &556951692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556951694}
+  - component: {fileID: 556951693}
+  m_Layer: 0
+  m_Name: AStar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556951693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556951692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60eefbe625b3244db0ba950e3215b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridBlock
+  playerPosition: {fileID: 317145958}
+  seekerPosition: {fileID: 142736277}
+  fleerPosition: {fileID: 470519508}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 64
+  gridWorldSize: {x: 30, y: 30}
+  nodeRadius: 0.5
+  distanceBetweenNodes: 0.1
+--- !u!4 &556951694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556951692}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669194701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1569,7 @@ GameObject:
   - component: {fileID: 698661428}
   - component: {fileID: 698661427}
   - component: {fileID: 698661426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1338,7 +1681,7 @@ GameObject:
   - component: {fileID: 724720546}
   - component: {fileID: 724720545}
   - component: {fileID: 724720544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1793,7 @@ GameObject:
   - component: {fileID: 767101495}
   - component: {fileID: 767101494}
   - component: {fileID: 767101493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1562,7 +1905,7 @@ GameObject:
   - component: {fileID: 907436640}
   - component: {fileID: 907436639}
   - component: {fileID: 907436638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1674,7 +2017,7 @@ GameObject:
   - component: {fileID: 978978362}
   - component: {fileID: 978978361}
   - component: {fileID: 978978360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1786,7 +2129,7 @@ GameObject:
   - component: {fileID: 1062962951}
   - component: {fileID: 1062962950}
   - component: {fileID: 1062962949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +2241,7 @@ GameObject:
   - component: {fileID: 1088319198}
   - component: {fileID: 1088319197}
   - component: {fileID: 1088319196}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2137,7 +2480,7 @@ GameObject:
   - component: {fileID: 1126531032}
   - component: {fileID: 1126531031}
   - component: {fileID: 1126531030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2249,7 +2592,7 @@ GameObject:
   - component: {fileID: 1158975826}
   - component: {fileID: 1158975825}
   - component: {fileID: 1158975824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,7 +2841,7 @@ GameObject:
   - component: {fileID: 1540593849}
   - component: {fileID: 1540593848}
   - component: {fileID: 1540593847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2610,7 +2953,7 @@ GameObject:
   - component: {fileID: 1556433710}
   - component: {fileID: 1556433709}
   - component: {fileID: 1556433708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2722,7 +3065,7 @@ GameObject:
   - component: {fileID: 1557801163}
   - component: {fileID: 1557801162}
   - component: {fileID: 1557801161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2834,7 +3177,7 @@ GameObject:
   - component: {fileID: 1735631290}
   - component: {fileID: 1735631289}
   - component: {fileID: 1735631288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2946,7 +3289,7 @@ GameObject:
   - component: {fileID: 1947330460}
   - component: {fileID: 1947330459}
   - component: {fileID: 1947330458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,7 +3401,7 @@ GameObject:
   - component: {fileID: 2124371142}
   - component: {fileID: 2124371141}
   - component: {fileID: 2124371140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hedge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3167,3 +3510,6 @@ SceneRoots:
   - {fileID: 669194705}
   - {fileID: 60489470}
   - {fileID: 317145958}
+  - {fileID: 142736277}
+  - {fileID: 470519508}
+  - {fileID: 556951694}
