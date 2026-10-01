@@ -5,8 +5,6 @@ using UnityEngine;
 public class Pathfinding : MonoBehaviour
 {
     GridBlock gridReference;
-    public Transform playerPosition;
-    public Transform enemyPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,11 +15,13 @@ public class Pathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindPath(enemyPosition.position, playerPosition.position);
+        
     }
 
-    void FindPath(Vector3 startInput, Vector3 targetInput)
+    public List<Node> FindPath(Vector3 startInput, Vector3 targetInput)
     {
+        gridReference.ResetNodes();
+
         Node startNode = gridReference.NodeFromWorldPoint(startInput);
         Node targetNode = gridReference.NodeFromWorldPoint(targetInput);
 
@@ -45,11 +45,7 @@ public class Pathfinding : MonoBehaviour
             openList.Remove(currentNode);
             closedList.Add(currentNode);
 
-            if (currentNode == targetNode)
-            {
-                GetFinalPath(startNode, targetNode);
-                return;
-            }
+            if (currentNode == targetNode) return GetFinalPath(startNode, targetNode);
 
             foreach (Node neighbor in gridReference.GetNeighboringNodes(currentNode))
             {
@@ -67,9 +63,11 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
+
+        return null;
     }
 
-    void GetFinalPath(Node startInput, Node endInput)
+    List<Node> GetFinalPath(Node startInput, Node endInput)
     {
         List<Node> finalPath = new List<Node>();
         Node currentNode = endInput;
@@ -82,7 +80,7 @@ public class Pathfinding : MonoBehaviour
 
         finalPath.Reverse();
 
-        gridReference.seekPath = finalPath;
+        return finalPath;
     }
 
     int GetManhattanDistance(Node nodeA, Node nodeB)

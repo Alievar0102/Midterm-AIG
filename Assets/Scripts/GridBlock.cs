@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GridBlock : MonoBehaviour
@@ -12,7 +13,7 @@ public class GridBlock : MonoBehaviour
     public Vector2 gridWorldSize;
 
     public float nodeRadius;
-    float nodeDiameter;
+    public float nodeDiameter { get { return nodeRadius * 2; } }
 
     public float distanceBetweenNodes;
 
@@ -26,7 +27,6 @@ public class GridBlock : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
         gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
         CreateGrid();
@@ -91,6 +91,16 @@ public class GridBlock : MonoBehaviour
         int y = Mathf.RoundToInt((gridSizeY - 1) * yPosition);
 
         return nodeGrid[x, y];
+    }
+
+    public void ResetNodes()
+    {
+        foreach (Node n in nodeGrid)
+        {
+            n.moveCost = 0;
+            n.heuristicCost = 0;
+            n.ParentNode = null;
+        }
     }
 
     private void OnDrawGizmos()
