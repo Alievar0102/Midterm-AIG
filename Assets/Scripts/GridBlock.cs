@@ -95,11 +95,14 @@ public class GridBlock : MonoBehaviour
 
     public void ResetNodes()
     {
-        foreach (Node n in nodeGrid)
+        if (nodeGrid != null)
         {
-            n.moveCost = 0;
-            n.heuristicCost = 0;
-            n.ParentNode = null;
+            foreach (Node n in nodeGrid)
+            {
+                n.moveCost = 0;
+                n.heuristicCost = 0;
+                n.ParentNode = null;
+            }
         }
     }
 

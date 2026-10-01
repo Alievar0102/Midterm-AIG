@@ -101,7 +101,6 @@ public class Enemy : MonoBehaviour
                 List<Node> listNeighbor = gridReference.GetNeighboringNodes(currentNode);
 
                 int fleeNodeDistance = 0;
-                int distance = 0;
 
                 bool foundCandidate = false;
 
@@ -115,7 +114,7 @@ public class Enemy : MonoBehaviour
 
                         if (path != null)
                         {
-                            distance = path.Count;
+                            int distance = path.Count;
                             if (!foundCandidate || distance > fleeNodeDistance)
                             {
                                 fleeNode = n;
