@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
 
                 if (foundCandidate)
                 {
-                    if (steps > distance) checkNodes.Add(fleeNode);
+                    if (steps > fleeNodeDistance) checkNodes.Add(fleeNode);
                     else foundNode = true;
                 }
             }
