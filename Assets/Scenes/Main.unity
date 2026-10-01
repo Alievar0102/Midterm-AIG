@@ -297,6 +297,9 @@ GameObject:
   - component: {fileID: 142736275}
   - component: {fileID: 142736274}
   - component: {fileID: 142736278}
+  - component: {fileID: 142736281}
+  - component: {fileID: 142736280}
+  - component: {fileID: 142736279}
   m_Layer: 0
   m_Name: Mama Duck
   m_TagString: Untagged
@@ -413,6 +416,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Guard
   IsGuard: 1
   playerPosition: {fileID: 317145958}
+--- !u!114 &142736279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789d5d4739bcae2478525ce0af22c810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SterringMover
+  maximumSpeed: 5
+  maximumForce: 10
+  slowingDistance: 2
+  satisfactionDistance: 0.1
+--- !u!54 &142736280
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!114 &142736281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142736272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6102fcc265dc75644b5f1f73a81a6a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wandering
+  maximumSpeed: 5
+  maximumForce: 10
+  wanderCooldown: 1
+  wanderRange: 1.5
 --- !u!1 &317145953
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +488,8 @@ GameObject:
   - component: {fileID: 317145956}
   - component: {fileID: 317145955}
   - component: {fileID: 317145954}
+  - component: {fileID: 317145960}
+  - component: {fileID: 317145959}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -558,6 +622,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317145959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317145953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be811b4593e2c647a665063e7522d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  speed: 5
+--- !u!54 &317145960
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317145953}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 3
 --- !u!1 &380391964
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +1011,9 @@ GameObject:
   - component: {fileID: 470519506}
   - component: {fileID: 470519505}
   - component: {fileID: 470519509}
+  - component: {fileID: 470519512}
+  - component: {fileID: 470519511}
+  - component: {fileID: 470519510}
   m_Layer: 0
   m_Name: Duckling
   m_TagString: Untagged
@@ -1023,6 +1130,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Guard
   IsGuard: 0
   playerPosition: {fileID: 317145958}
+--- !u!114 &470519510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6102fcc265dc75644b5f1f73a81a6a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wandering
+  maximumSpeed: 5
+  maximumForce: 10
+  wanderCooldown: 1
+  wanderRange: 1.5
+--- !u!114 &470519511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789d5d4739bcae2478525ce0af22c810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SterringMover
+  maximumSpeed: 5
+  maximumForce: 10
+  slowingDistance: 2
+  satisfactionDistance: 0.1
+--- !u!54 &470519512
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470519503}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!1 &547719004
 GameObject:
   m_ObjectHideFlags: 0
