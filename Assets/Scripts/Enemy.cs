@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
 
     Node FindFleeTarget(Vector3 initialTarget)
     {
-        int steps = Mathf.RoundToInt(initialTarget.magnitude / gridReference.nodeDiameter);
+        int steps = Mathf.RoundToInt(Vector3.Distance(transform.position, initialTarget) / gridReference.nodeDiameter);
 
         Node fleeNode = gridReference.NodeFromWorldPoint(initialTarget);
 
@@ -116,7 +116,7 @@ public class Enemy : MonoBehaviour
                         if (path != null)
                         {
                             distance = path.Count;
-                            if (!foundNode || distance > fleeNodeDistance)
+                            if (!foundCandidate || distance > fleeNodeDistance)
                             {
                                 fleeNode = n;
                                 fleeNodeDistance = distance;
