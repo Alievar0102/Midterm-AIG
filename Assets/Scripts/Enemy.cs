@@ -24,8 +24,8 @@ public class Enemy : MonoBehaviour
     {
         pathfinding = FindFirstObjectByType<Pathfinding>();
         gridReference = FindFirstObjectByType<GridBlock>();
-        steerMovement = FindFirstObjectByType<SterringMover>();
-        wanderMovement = FindFirstObjectByType<Wandering>();
+        steerMovement = GetComponent<SterringMover>();
+        wanderMovement = GetComponent<Wandering>();
     }
 
     // Update is called once per frame
