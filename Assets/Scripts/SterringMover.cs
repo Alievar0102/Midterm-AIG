@@ -10,7 +10,7 @@ public class SterringMover : MonoBehaviour
     public float maximumSpeed = 5f;
     public float maximumForce = 10f;
     public float slowingDistance = 2f;
-    public float satisfactionDistance = 0.1f;
+    public float satisfactionDistance = 0.5f;
 
     Rigidbody rb;
     int pathIndex = 0;
@@ -66,7 +66,7 @@ public class SterringMover : MonoBehaviour
 
     public void FollowPath(List<Node> path)
     {
-        if (path.Count == 0||path == null) return;
+        if (path == null || path.Count == 0) return;
         pathIndex = Mathf.Clamp(pathIndex, 0, path.Count - 1);
 
         Vector3 targetPosition = path[pathIndex].worldPosition;

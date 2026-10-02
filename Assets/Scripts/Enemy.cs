@@ -95,11 +95,11 @@ public class Enemy : MonoBehaviour
         }
         else if (isStopping)
         {
-
+            steerMovement.Stop();
         }
         else if (currentPath != null)
         {
-
+            steerMovement.FollowPath(currentPath);
         }
     }
 
