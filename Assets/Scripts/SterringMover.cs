@@ -83,8 +83,8 @@ public class SterringMover : MonoBehaviour
 
     public void ResetPath() { pathIndex = 0; }
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
         
     }

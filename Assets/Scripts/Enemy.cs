@@ -12,17 +12,29 @@ public class Enemy : MonoBehaviour
 
     Pathfinding pathfinding;
     GridBlock gridReference;
+    SterringMover steerMovement;
+    Wandering wanderMovement;
+
+    bool isWandering;
+    bool isStopping;
+    List<Node> currentPath;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pathfinding = FindFirstObjectByType<Pathfinding>();
         gridReference = FindFirstObjectByType<GridBlock>();
+        steerMovement = FindFirstObjectByType<SterringMover>();
+        wanderMovement = FindFirstObjectByType<Wandering>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        isWandering = false;
+        isStopping = false;
+        currentPath = null;
+
         if (IsGuard) // mama duck
         {
             // find seek path
@@ -35,18 +47,18 @@ public class Enemy : MonoBehaviour
                 if (isSeeking)
                 {
                     gridReference.seekPath = seekPath;
-                    // calls steering seek script
+                    currentPath = seekPath;
                 }
                 else
                 {
                     gridReference.seekPath = null;
-                    // calls wander script
+                    isWandering = true;
                 }
             }
             else // count == 0 -> player and enemy in the same node
             {
                 gridReference.seekPath = null;
-                // stop movement
+                isStopping = true;
             }
         }
         else // duckling
@@ -65,14 +77,29 @@ public class Enemy : MonoBehaviour
                 List<Node> fleePath = pathfinding.FindPath(transform.position, fleeNode.worldPosition);
 
                 gridReference.fleePath = fleePath;
-
-                // calls steering seek script
+                currentPath = fleePath;
             }
             else
             {
                 gridReference.fleePath = null;
-                // calls wander script
+                isWandering = true;
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isWandering)
+        {
+            wanderMovement.Wander();
+        }
+        else if (isStopping)
+        {
+
+        }
+        else if (currentPath != null)
+        {
+
         }
     }
 
