@@ -49,7 +49,7 @@ public class Pathfinding : MonoBehaviour
 
             foreach (Node neighbor in gridReference.GetNeighboringNodes(currentNode))
             {
-                if (neighbor.IsWall || closedList.Contains(neighbor)) continue;
+                if ((neighbor.IsWall && neighbor != targetNode) || closedList.Contains(neighbor)) continue;
 
                 int costToNeighbor = currentNode.moveCost + GetManhattanDistance(currentNode, neighbor);
 
