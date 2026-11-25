@@ -19,12 +19,16 @@ public class DuckMovement : MonoBehaviour
 
     public void DuckMove(Vector3 destination)
     {
+        if (agent == null || !agent.isOnNavMesh) return;
+
         agent.isStopped = false;
         agent.SetDestination(destination);
     }
 
     public void DuckStop()
     {
+        if (agent == null || !agent.isOnNavMesh) return;
+
         agent.isStopped = true;
     }
 

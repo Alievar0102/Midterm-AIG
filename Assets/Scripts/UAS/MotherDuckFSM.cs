@@ -11,6 +11,11 @@ public class MotherDuckFSM : MonoBehaviour
 
     public float radiusAttack = 1f;
 
+    public float minIdlePatrol = 5f;
+    public float maxIdlePatrol = 10f;
+
+    private float timerIdlePatrol;
+
     public Sensor sensor;
 
     public Transform fox;
@@ -46,16 +51,31 @@ public class MotherDuckFSM : MonoBehaviour
         }
     }
 
+    private void SetRandomTimer()
+    {
+        timerIdlePatrol = Random.Range(minIdlePatrol, maxIdlePatrol);
+    }
+
     private void CheckIdle()
     {
         if (sensor.isFoxSeen) ChangeState(State.Chase);
         else if (sensor.isFoxHeard) ChangeState(State.Investigate);
+        else
+        {
+            timerIdlePatrol -= Time.deltaTime;
+            if (timerIdlePatrol <= 0f) ChangeState(State.Patrol);
+        }
     }
 
     private void CheckPatrol()
     {
         if (sensor.isFoxSeen) ChangeState(State.Chase);
         else if (sensor.isFoxHeard) ChangeState(State.Investigate);
+        else
+        {
+            timerIdlePatrol -= Time.deltaTime;
+            if (timerIdlePatrol <= 0f) ChangeState(State.Idle);
+        }
     }
 
     private void CheckInvestigate()
@@ -83,5 +103,8 @@ public class MotherDuckFSM : MonoBehaviour
         if (currentState == newState) return;
 
         currentState = newState;
+
+        if (currentState == State.Idle || currentState == State.Patrol)
+            SetRandomTimer();
     }
 }
