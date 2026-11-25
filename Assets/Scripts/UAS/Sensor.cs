@@ -4,8 +4,7 @@ using UnityEngine;
 public class Sensor : MonoBehaviour
 {
     public float radiusSight;
-    [Range(0, 360)]
-    public float angleSight;
+    [Range(0, 360)] public float angleSight;
 
     public float radiusHearing;
     public Vector3 lastHeardPosition;

@@ -1,19 +1,26 @@
 using UnityEngine;
 
-public class MotherDuckFSM : Singleton<MotherDuckFSM>
+public class MotherDuckFSM : MonoBehaviour
 {
     public enum State
     {
         Idle, Patrol, Investigate, Chase, Attack
     }
 
-    public State currentState = State.Idle;
+    public State currentState;
+
+    public float radiusAttack = 1f;
 
     public Sensor sensor;
 
     public Transform fox;
 
-    private void Update()
+    void Start()
+    {
+        currentState = State.Idle;
+    }
+
+    void Update()
     {
         switch (currentState)
         {
@@ -59,12 +66,16 @@ public class MotherDuckFSM : Singleton<MotherDuckFSM>
 
     private void CheckChase()
     {
-
+        if (!sensor.isFoxSeen) ChangeState(State.Investigate);
+        else if (Vector3.Distance(transform.position, fox.position) <= radiusAttack)
+            ChangeState(State.Attack);
     }
 
     private void CheckAttack()
     {
-
+        if (!sensor.isFoxSeen) ChangeState(State.Investigate);
+        else if (Vector3.Distance(transform.position, fox.position) > radiusAttack)
+            ChangeState(State.Chase);
     }
 
     private void ChangeState(State newState)
